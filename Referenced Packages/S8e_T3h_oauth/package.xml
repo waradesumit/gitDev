@@ -15,7 +15,7 @@
                 <members>sf_com_apps__S8e_T3h_oauth</members>
                 <name>Module</name>
             </types>
-            <version>8.0</version>
+            <version>7.0</version>
         </module>
     </modules>
     <namespacePrefix>sf_com_apps</namespacePrefix>

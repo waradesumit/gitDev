@@ -15,7 +15,7 @@
                 <members>sf_com_apps__Dataloader_Bulk_oauth</members>
                 <name>Module</name>
             </types>
-            <version>7.0</version>
+            <version>6.0</version>
         </module>
     </modules>
     <namespacePrefix>sf_com_apps</namespacePrefix>

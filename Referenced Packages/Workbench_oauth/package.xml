@@ -15,7 +15,7 @@
                 <members>sf_com_apps__Workbench_oauth</members>
                 <name>Module</name>
             </types>
-            <version>3.0</version>
+            <version>2.0</version>
         </module>
     </modules>
     <namespacePrefix>sf_com_apps</namespacePrefix>
