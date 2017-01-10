@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Buy_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Buy Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Buying_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Company_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Company Name</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Index__c</fullName>
+        <externalId>false</externalId>
+        <label>Index</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NSE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BSE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Salary2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Salary2</label>
+        <referenceTo>Salary2__c</referenceTo>
+        <relationshipLabel>Stocks</relationshipLabel>
+        <relationshipName>Stocks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>OPEN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLOSED</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Stock</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Buy_Price__c</columns>
+        <columns>Quantity__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Stock Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Stocks</pluralLabel>
+    <searchLayouts>
+        <lookupFilterFields>Buy_Price__c</lookupFilterFields>
+        <lookupFilterFields>Index__c</lookupFilterFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <webLinks>
+        <fullName>Send_with_Docu_Sign</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send with Docu Sign</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)}
+//********* Option Declarations (Do not modify )*********//
+var RC = &apos;&apos;;var RSL=&apos;&apos;;var RSRO=&apos;&apos;;var RROS=&apos;&apos;;var CCRM=&apos;&apos;;var CCTM=&apos;&apos;;var CCNM=&apos;&apos;;var CRCL=&apos;&apos;; var CRL=&apos;&apos;;var OCO=&apos;&apos;;var DST=&apos;&apos;;var LA=&apos;&apos;;var CEM=&apos;&apos;;var CES=&apos;&apos;;var STB=&apos;&apos;;var SSB=&apos;&apos;;var SES=&apos;&apos;;var SEM=&apos;&apos;;var SRS=&apos;&apos;;var SCS =&apos;&apos;;var RES=&apos;&apos;;
+//*************************************************//
+// Modify individual options here:
+// Related Content (default no related content)
+RC = &apos;&apos;; //Ex: GetRelContentIDs(&quot;{!Stock__c.Id}&quot;);
+// Recipient Signer Limit (default no limit)
+RSL = &apos;&apos;; //Ex: &apos;3&apos;
+// Recipient Starting Routing Order (default 1)
+RSRO = &apos;&apos;; // Ex: &apos;1&apos;
+// Recipient Routing Order Sequential (default not sequential)
+RROS = &apos;&apos;; //Ex: &apos;1&apos;
+// Custom Contact Role Map (default config role)
+CCRM = &apos;&apos;; //Ex: &apos;Decision Maker~Signer1;Economic Buyer~Carbon Copy&apos;
+// Custom Contact Type Map (default Signer)
+CCTM = &apos;&apos;; //Ex: &apos;Decision Maker~Signer;Economic Buyer~CC&apos;
+// Custom Contact Note Map (default no note)
+CCNM = &apos;&apos;; //Ex: &apos;Decision Maker~Note for DM;Economic Buyer~Note For EB;DEFAULT_NOTE~Default Note&apos;
+// Custom Related Contact List (default object contact)
+CRCL = &apos;&apos;; //Ex: &apos;MyContacts__r,Email~Email__c;FirstName~First_Name__c;LastName~Last_Name__c;Role~Role__c,LoadDefaultContacts~0&apos;
+// Custom Recipient List
+CRL = &apos;&apos;; //Ex: &apos;Email~;FirstName~;LastName~;Role~SignInPersonName~;RoutingOrder~;AccessCode~;RecipientNote~;SignNow~, LoadDefaultContacts~1&apos;
+// One Click Option (default edit envelope screen)
+OCO = &apos;&apos;; //Ex: Tag
+// DocuSign Template ID (default no template)
+DST = &apos;&apos;; //Ex: &apos;67870A79-A0B5-4596-8AC1-CC7CC1EA01EB&apos;
+// Load Attachments (default on)
+LA = &apos;&apos;; //Ex: &apos;0&apos;
+// Custom Email Message (default in config)
+CEM = &apos;&apos;; //Ex: &apos;Envelope sent by [FirstName] [LastName] ([Email])!&apos;
+// Custom Email Subject (default in config)
+CES = &apos;&apos;; //Ex: &apos;Re: Stock__c Name: {!Stock__c.Name}&apos;
+// Show Tag Button (default in config)
+STB = &apos;&apos;; //Ex: &apos;1&apos;
+// Show Send Button (default in config)
+SSB = &apos;1&apos;; //Ex: &apos;1&apos;
+// Show Email Subject (default in config)
+SES = &apos;&apos;; //Ex: &apos;1&apos;
+// Show Email Message (default in config)
+SEM = &apos;&apos;; //Ex: &apos;1&apos;
+// Show Reminder/Expire (default in config)
+SRS = &apos;&apos;; //Ex: &apos;1&apos;
+// Show Chatter (default in config)
+SCS = &apos;&apos;; //Ex: &apos;1&apos;
+// Reminder and Expiration Settings
+RES = &apos;&apos;; //Ex: &apos;0,1,2,0,120,3&apos;
+//********* Page Callout (Do not modify) *********//
+window.location.href = &quot;/apex/dsfs__DocuSign_CreateEnvelope?DSEID=0&amp;SourceID={!Stock__c.Id}&amp;RC=&quot;+RC+&quot;&amp;RSL=&quot;+RSL+&quot;&amp;RSRO=&quot;+RSRO+&quot;&amp;RROS=&quot;+RROS+&quot;&amp;CCRM=&quot;+CCRM+&quot;&amp;CCTM=&quot;+CCTM+&quot;&amp;CRCL=&quot;+CRCL+&quot;&amp;CRL=&quot;+CRL+&quot;&amp;OCO=&quot;+OCO+&quot;&amp;DST=&quot;+DST+&quot;&amp;CCNM=&quot;+CCNM+&quot;&amp;LA=&quot;+LA+&quot;&amp;CEM=&quot;+CEM+&quot;&amp;CES=&quot;+CES+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;STB=&quot;+STB+&quot;&amp;SSB=&quot;+SSB+&quot;&amp;SES=&quot;+SES+&quot;&amp;SEM=&quot;+SEM+&quot;&amp;SRS=&quot;+SRS+&quot;&amp;SCS=&quot;+SCS+&quot;&amp;RES=&quot;+RES;
+//*******************************************//</url>
+    </webLinks>
+</CustomObject>

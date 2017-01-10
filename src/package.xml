@@ -2,15 +2,11 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>*</members>
-        <name>ApexClass</name>
+        <name>CustomObject</name>
     </types>
     <types>
         <members>*</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
+        <name>Workflow</name>
     </types>
     <version>36.0</version>
 </Package>
