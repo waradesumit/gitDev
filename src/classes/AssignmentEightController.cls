@@ -4,6 +4,7 @@ public class AssignmentEightController {
     List<Account> acc = new list<Account>();
     public string temp {get; set;}
     public string str {get; set;}
+    public string str1 {get; set;}
    
     public void displaySelected(){
         ApexPages.addMessage(new ApexPages.message(ApexPages.severity.INFO,'Account '+temp+' was selected!' ));
