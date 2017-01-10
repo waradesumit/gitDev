@@ -1,0 +1,11 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="Login">
+            <apex:pageBlockSection >
+                <apex:inputText label="Username" /><br/>
+                <apex:inputText label="Password" /><br/>
+                <apex:commandButton value="Submit"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

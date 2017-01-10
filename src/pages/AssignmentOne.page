@@ -1,0 +1,14 @@
+<apex:page standardController="Account" recordSetVar="accounts" tabstyle="Interview1__tab" sidebar="false">
+   <apex:form > 
+   <apex:sectionHeader title="Interview One"/>
+   <apex:pageBlock title="All Accounts">
+    <apex:pageBlockTable value="{!accounts}" var="a">
+      <apex:column value="{!a.name}"/>
+      <apex:column value="{!a.BillingState}"/>
+      <apex:column value="{!a.phone}"/>
+      <apex:column value="{!a.website}"/>
+     <apex:column value="{!a.Number_of_Contacts__c}"/> 
+   </apex:pageBlockTable>
+   </apex:pageBlock>
+   </apex:form>
+</apex:page>

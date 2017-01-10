@@ -1,0 +1,17 @@
+<apex:page controller="PaginationControllerOpportunity">
+    <apex:form >
+        <apex:pageBlock title="All Opportunity Details" id="BlockId">
+            <apex:pageBlockTable value="{!Opplist}" var="Opp">
+                <apex:column value="{!Opp.name}" />
+                <apex:column value="{!Opp.StageName}" />
+                <apex:column value="{!Opp.CloseDate }" />
+            </apex:pageBlockTable>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!FirstPage}" value="First Page" rerender="BlockId" disabled="{!Prev}" />
+                <apex:commandButton action="{!Previous}" value="Previous" rerender="BlockId" disabled="{!Prev}" />
+                <apex:commandButton action="{!Next}" value="Next" rerender="BlockId" disabled="{!Nxt}" />
+                <apex:commandButton action="{!LastPage}" value="Last Page" rerender="BlockId" disabled="{!Nxt}" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

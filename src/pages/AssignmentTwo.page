@@ -1,0 +1,30 @@
+<apex:page controller="AssignmentTwoController" tabstyle="Interview2__tab" sidebar="false">
+   <apex:form >
+   <script>
+   function test(){
+   alert('Inside');
+   }
+   </script>
+   <apex:pageMessages />
+       <apex:sectionHeader title="Interview Two"/>
+           <apex:pageBlock >
+               <apex:pageBlockSection showHeader="true" title="Search" collapsible="false"  >
+                   <apex:pageblockSectionItem >
+                         <apex:outputLabel for="searchText" value="Search"/>
+                        <apex:inputText id="searchText" value="{!searchText}"/>
+                       </apex:pageblockSectionItem>
+                        <apex:commandButton value="Search" action="{!doSearch}" />
+                        </apex:pageBlockSection>
+           </apex:pageBlock>
+           <apex:pageBlock >
+              <apex:pageBlockSection showHeader="true" title="Results" columns="1" collapsible="false">
+                <apex:pageBlockTable value="{!accounts}" var="a">
+                  <apex:column headerValue="Account Name" value="{!a.name}"/>
+                  <apex:column headerValue="Billing State/Province" value="{!a.billingState}"/>
+                  <apex:column headerValue="Phone" value="{!a.phone}"/>
+                  <apex:column headerValue="Website" value="{!a.website}"/>  
+               </apex:pageBlockTable>
+              </apex:pageBlockSection>
+            </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,36 @@
+<apex:page controller="layoutAssignmentController" tabStyle="Interview_Two__c">
+    <apex:sectionHeader title="Exercise 3-4 Goal"/>
+        <apex:form > 
+            <apex:pageBlock title="Review Edit" id="thePageBlock" mode="edit">
+                <apex:commandButton value="Save"/> 
+                <apex:commandButton value="Cancel"/>  
+            </apex:pageBlock>
+            <apex:pageBlock >
+                <apex:pageBlockSection showHeader="true" title="Information" columns="2" collapsible="false">
+                     <apex:outputLabel value="Recommend for hire? "/>
+                     <apex:SelectRadio value="{!HiringOption}">
+                         <apex:selectOptions value="{!yesno}"/>
+                     </apex:SelectRadio>
+                     <apex:outputLabel value="Job Aplication"/>
+                     <apex:outputLink value="https://www.salesforce.com" title="JA">www.salesforce.com</apex:outputLink>
+                     <apex:inputField value="{!person.ReportsToId}"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+            <apex:pageBlock >
+                <apex:pageBlockSection showHeader="true" title="Scores"  columns="2" collapsible="false">
+                    <apex:outputLabel value="Cultural Fit"/>
+                    <apex:SelectRadio value="{!ratings}">
+                        <apex:selectOptions value="{!RatingOptions}"/>
+                    </apex:SelectRadio>   
+                    <apex:outputLabel value="Cultural Fit Comments"/>  
+                    <apex:inputTextarea id="culturalFitComm"/>   
+                    <apex:outputLabel value="Experience"/>  
+                    <apex:selectList value="{!experience}" multiselect="true" size="3">
+                    <apex:selectOptions value="{!items}"/>                    
+                    </apex:selectList>
+                    <apex:outputLabel value="Experience Comments"/>  
+                    <apex:inputTextarea id="experienceComments" rows="2"/>        
+                </apex:pageBlockSection>
+             </apex:pageblock>
+        </apex:form>
+</apex:page>

@@ -1,0 +1,29 @@
+<apex:page controller="AssignmentThreeController" tabstyle="Interview3__tab"> 
+<apex:pagemessages ></apex:pagemessages>
+  <apex:form >   
+   <apex:pageBlock > 
+          <apex:pageBlockButtons > 
+             <apex:commandButton value="Process Selected" action="{!processSelected}" rerender="table1,test" status="status" onclick="if(!confirm('Are you sure?')){return false};"/>              
+         </apex:pageBlockButtons> 
+      <!--   <apex:actionStatus id="status" startText="Please wait..."></apex:actionStatus>-->
+
+                  <apex:pageBlockSection >         
+         <apex:pageBlockSectionItem >
+          <apex:pageBlockTable value="{!accounts}" var="a" id="table"> 
+            <apex:column headerValue="Select"> 
+               <apex:inputCheckbox value="{!a.selected}"/> 
+                 </apex:column> 
+                 <apex:column headerValue="Name" value="{!a.acnt.Name}" /> 
+                 <apex:column headerValue="Phone" value="{!a.acnt.Phone}" /> 
+             </apex:pageBlockTable> 
+             </apex:pageBlockSectionItem>
+             <apex:outputPanel id="table1">
+             <apex:pageBlockTable value="{!selectedAccounts}" var="alist" >
+                 <apex:column headerValue="Name" value="{!alist.name}" />  
+                 <apex:column headerValue="Phone" value="{!alist.phone}" />           
+              </apex:pageBlockTable>  
+             </apex:outputPanel> 
+        </apex:pageBlockSection>
+           </apex:pageBlock> 
+               </apex:form> 
+ </apex:page>

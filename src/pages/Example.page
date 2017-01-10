@@ -1,0 +1,9 @@
+<apex:page standardController="Account" extensions="Copy">
+    <apex:form >
+        <apex:inputField value="{!Account.Type}" />
+        <apex:inputField value="{!Account.AccountNumber}" />
+        <apex:inputField value="{!Account.Rating}" />
+        <apex:commandButton action="{!save}" value="Save" id="btnSave"/>
+        <apex:detail />
+    </apex:form>
+    </apex:page>

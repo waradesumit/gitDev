@@ -1,0 +1,32 @@
+<apex:page controller="AssignmentNineController" tabStyle="Interview9__tab">
+<script src="{!$Resource.jquery1}"/>
+<script src="{!$Resource.jquery2}"/>
+<apex:stylesheet value="{!$Resource.jquerycss}"/>
+
+<script type="text/javascript">
+var j$ = jQuery.noConflict();
+j$(document).ready(function() {
+j$("#tabs").tabs();
+        });
+</script>
+<apex:sectionHeader title="Interview Nine"/>
+<div id="tabs">
+<ul>
+<apex:repeat value="{!accounts}" var="a">
+<li><a href="#tabs-{!a.Id}">{!a.Name}</a></li>
+</apex:repeat>
+</ul>
+<apex:repeat value="{!accounts}" var="a">
+<div id="tabs-{!a.Id}">
+<apex:pageBlock title="Contacts" mode="edit">
+<apex:pageBlockTable rules="None" value="{!a.contacts}" var="c" width="100%" >
+<apex:column headerValue="Name" value="{!c.FirstName} {!c.LastName}"></apex:column>
+<apex:column headerValue="Title"  value="{!c.Title}"/>
+<apex:column headerValue="Email" value="{!c.Email}"/>
+<apex:column headerValue="Phone" value="{!c.Phone}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</div>
+</apex:repeat>
+</div>
+</apex:page>

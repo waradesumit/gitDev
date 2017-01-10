@@ -1,0 +1,23 @@
+<apex:page standardController="Contact" extensions="HospitalManagementController" renderAs="pdf">
+ <apex:form >
+     <apex:sectionHeader title="XYZ Hospital"/>
+       <apex:pageBlock >
+           <apex:pageBlockSection showHeader="true" title="Patient" collapsible="false">
+             <apex:outputLabel for="patientName" value="Patient Name: "/>
+             <apex:outputLabel for="patient" value="{!contact.name}"/>
+             <apex:outputLabel for="patientAge" value="Patient Age: "/>
+             <apex:outputLabel for="patient" value="{!contact.Age__c}"/>
+             <apex:outputLabel for="patientAge" value="Patient Email: "/>
+             <apex:outputLabel for="patient" value="{!contact.email}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection showHeader="true" title="Payment Details" collapsible="false">
+             <apex:outputLabel for="paymentMode" value="Payment Amount: "/>
+             <apex:outputLabel for="paymentMode" value="{!paymentAmount} $"/>
+             <apex:outputLabel for="paymentMode" value="Payment Mode: "/>
+             <apex:outputLabel for="paymentMode" value="{!paymentMode}"/>
+             <apex:outputLabel for="paymentDate" value="Payment Date: "/>
+             <apex:outputLabel for="paymentDate" value="{!paymentDate}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,19 @@
+<apex:page controller="AssignmentFourController" tabstyle="Interview_Four__c">
+<apex:sectionHeader title="Interview Four"/>
+    <apex:form >
+        <apex:outputLabel ><b>Accounts with Contacts</b></apex:outputLabel><p/>
+        <apex:pageMessages />
+        <apex:repeat value="{!List}" var="a">
+          <apex:pageblock >          
+            <apex:pageBlockSection showHeader="true" title="{!a.name}" columns="1" collapsible="false">
+                <apex:pageBlockTable value="{!a.contacts}" var="c">
+                    <apex:column width="200" headerValue="First Name" value="{!c.firstname}"/>
+                    <apex:column width="200" headerValue="Last Name" value="{!c.lastname}"/>
+                    <apex:column width="200" headerValue="Phone" value="{!c.phone}"/>
+                    <apex:column width="200" headerValue="Email" value="{!c.email}"/>  
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+          </apex:pageblock>
+       </apex:repeat>
+    </apex:form>
+</apex:page>

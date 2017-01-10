@@ -1,0 +1,31 @@
+<apex:page controller="HerokuRegistrationController">
+    <apex:pageBlock title="Create new user">
+        <apex:form id="registrationForm">
+            <apex:outputPanel rendered="{!isLoginEnabled=false}">
+            <apex:pageMessages id="error"/>
+                <apex:panelGrid columns="2">          
+                
+                    <apex:outputLabel value="First Name"/>
+                    <apex:inputText required="true" id="firstName" value="{!firstName}"/> 
+                    
+                    <apex:outputLabel value="Last Name" />
+                    <apex:inputText required="true" id="lastName" value="{!lastName}"/>
+                    
+                    <apex:outputLabel value="Email" />
+                    <apex:inputText required="true" id="email" value="{!email}"/>
+                    
+                    <apex:outputLabel value="Password" />
+                    <apex:inputsecret required="true" id="password" value="{!password}"/>
+                    <br /> 
+                        <apex:commandButton value="Register" id="registerButton" action="{!registerUser}"/> 
+                    <br />
+                </apex:panelGrid>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!isLoginEnabled}">
+                <apex:outputLabel value="Registration Successful !!!... Please" />
+                <apex:commandLink value="Click here" id="loginButton" action="{!login}"/>
+                <apex:outputLabel value="to login." />
+            </apex:outputPanel>
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>

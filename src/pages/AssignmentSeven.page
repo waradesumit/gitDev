@@ -1,0 +1,24 @@
+<apex:page controller="AssignmentSevenController" tabStyle="Interview7__tab">
+<apex:pageMessages ></apex:pageMessages>
+<apex:sectionHeader title="" subtitle="Interview Six"/>
+    <apex:form >
+        <apex:pageBlock title="Input">
+        <apex:pageBlockSection >
+        <apex:inputText label="City" value="{!City}"/><br/>
+        <apex:inputText label="State" value="{!State}"/><br/>
+        <apex:commandButton value="Submit" action="{!submit}"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Output">
+        <apex:pageBlockSection >
+        <apex:inputTextarea label="HTTP Response" rows="10" cols="50" value="{!HTTPResponse}"/><br/>
+        <apex:inputText label="Latitude" value="{!Latitude}"/><br/>
+
+        <apex:inputText label="Longitude" value="{!Longitude}"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock> 
+            
+     </apex:form>
+
+</apex:page>

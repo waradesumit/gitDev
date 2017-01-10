@@ -1,0 +1,33 @@
+<apex:page controller="AssignmentEightController" tabstyle="Interview8__tab" sidebar="false">
+<script>
+function createRadioButton(rdoButton){
+     document.getElementById('j_id0:j_id29:j_id30:hidden').value = rdoButton;
+     display();
+    }
+</script>
+<apex:pageMessages id="temp"></apex:pageMessages>
+<apex:sectionHeader title="" subtitle="Interview Eight"/>
+     <apex:form > 
+         <apex:pageBlock > 
+           <table width= "100%" border ="1">
+                <tr>
+                    <td width= "50%">
+                        <apex:pageBlockSection collapsible="false"/>
+                            <apex:pageBlockTable value="{!Tempaccount}" var="a" id="Table1">
+                                <apex:column >
+                                    <input type="radio" name="rdoAccount" value="{!a.Radio__c}" onclick="createRadioButton('{!a.Name}')">
+                                     </input>                            
+                                </apex:column>
+                                <apex:column headerValue="Account Name" value="{!a.Name}" /> 
+                                <apex:column headerValue="Billing State/Province" value="{!a.billingstate}" /> 
+                                <apex:column headerValue="Phone" value="{!a.phone}" /> 
+                                <apex:column headerValue="Website" value="{!a.website}" /> 
+                             </apex:pageBlockTable>
+                         <apex:inputHidden id="hidden" value="{!temp}"/>                          
+                     </td>                                       
+               </tr>
+          </table>                    
+          <apex:actionFunction name="display" id="display" action="{!displaySelected}"  reRender="temp"/>
+        </apex:pageBlock> 
+     </apex:form> 
+</apex:page>
