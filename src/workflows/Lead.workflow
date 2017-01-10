@@ -33,7 +33,7 @@
             <name>GEO_AMERICAS</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
+        <active>true</active>
         <criteriaItems>
             <field>Lead.Country</field>
             <operation>equals</operation>
