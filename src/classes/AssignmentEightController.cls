@@ -6,7 +6,8 @@ public class AssignmentEightController {
     public string str {get; set;}
     public string str1 {get; set;}
     public string str2 {get; set;}
-   
+    public string str3 {get; set;}
+    
     public void displaySelected(){
         ApexPages.addMessage(new ApexPages.message(ApexPages.severity.INFO,'Account '+temp+' was selected!' ));
     }
